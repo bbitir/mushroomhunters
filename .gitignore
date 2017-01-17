@@ -90,3 +90,6 @@ ENV/
 
 db.sqlite3
 uploads/
+
+.DS_Store
+*.DS_Store
