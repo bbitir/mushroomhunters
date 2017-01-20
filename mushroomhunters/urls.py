@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from nodes.views import index
+from nodes.views import index, detail
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index),
+    url(r'^nodes/(?P<id>\d+)$', detail, name='node_detail'),
 ]

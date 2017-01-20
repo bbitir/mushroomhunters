@@ -1,3 +1,4 @@
+<!DOCKTYPE html>
 <html>
 
 <head>
@@ -10,6 +11,19 @@
   <header>
     mushroomhunters
   </header>
+  {% for node in nodes %}
+
+  <h3>
+    {{ node.name }}
+  </h3>
+  <h2>
+    {{ node.scientific_name }}
+  </h2>
+
+  <p>
+    {{ node.description|linebreaksbr }}
+  </p>
+  {% endfor %}
 
 </body>
 
