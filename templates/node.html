@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>
+  {{ node.name }}
+</h2>
+<ul>
+  <li>{{ node.scientific_name }} </li>
+  <li>{{ node.category }}</li>
+  <li>{{ node.coordinates }}</li>
+  <li>{{ node.surface }}</li>
+  <li>{{ node.colour }}</li>
+  <li>{{ node.pile }}</li>
+  <li>{{ node.aroma }}</li>
+  <li>{{ node.season }}</li>
+  <li>{{ node.location }}</li>
+  <li>{{ node.warning }}</li>
+</ul>
+
+<p>
+  {{ node.description|linebreaksbr }}
+
+{% endblock %}

@@ -18,12 +18,3 @@ def detail(request, id):
             'node': get_object_or_404(Node, id=id)
         }
     )
-
-##def review(request):
-##    return render(
-##        request,
-##        'review.html',
-##        {
-##            '': Comment.objects.all(),
-##        }
-##    )

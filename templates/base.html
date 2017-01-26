@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>mushroomhunters
+  </title>
+</head>
+
+<body>
+
+  <header>
+    <a href="/">mushroomhunters</a>
+  </header>
+  {% for node in nodes %}
+
+  <h2>
+    <a href="{{ node.get_absolute_url }}">{{ node.name }}</a>
+  </h2>
+
+
+  {% endfor %}
+
+{% block content %}
+
+{% endblock %}
+
+</div>
+	<footer class="footer">
+		<p>&copy; mushroomhunters - 2017 </p>
+	</footer>
+</div>
+
+</body>
+
+</html>
