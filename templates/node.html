@@ -20,5 +20,22 @@
 
 <p>
   {{ node.description|linebreaksbr }}
+</p>
+
+  {% for comment in node.comment_set.all %}
+  <ul>
+    <li>
+      ({{ comment.vote }})
+      {{ comment.body }}
+      <small>
+        {{ comment.user.username }}
+      </small>
+    </li>
+  </ul>
+  {% endfor %}
+
+<p>
+  <a href=" {% url "new_comment" node.id %}">yorum ekle.</a>
+</p>
 
 {% endblock %}

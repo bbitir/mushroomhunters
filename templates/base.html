@@ -11,6 +11,16 @@
   <header>
     <a href="/">mushroomhunters</a>
   </header>
+
+  {% if messages %}
+  <ul class="messages">
+      {% for messages in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}> {{ message }}
+      </li>
+      {% endfor %}
+  </ul>
+  {% endif %}
+
   {% for node in nodes %}
 
   <h2>
@@ -24,7 +34,7 @@
 
 {% endblock %}
 
-</div>
+<div>
 	<footer class="footer">
 		<p>&copy; mushroomhunters - 2017 </p>
 	</footer>

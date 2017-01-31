@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from nodes.views import index, detail
+from nodes.views import index, detail, new_comment
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index),
     url(r'^nodes/(?P<id>\d+)$', detail, name='node_detail'),
+    url(r'^nodes/(?P<node_id>\d+)/new-comment$', new_comment , name='new_comment')
 ]
